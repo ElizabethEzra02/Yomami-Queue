@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ORDER READY PAGE</title>
+    <title>ORDER IS READY PAGE</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -58,10 +59,10 @@ body, html {
 
   /* Add the blur effect */
   filter: blur(2px);
-  -webkit-filter: blur(0px);
+  -webkit-filter: blur(2px);
 
   /* Full height */
-  height: 80%;
+  height: 85%;
 
   /* Center and scale the image nicely */
   background-position: top center;
@@ -69,22 +70,26 @@ body, html {
   background-size: cover;
 }
 
+
+
 /* Position text in the middle of the page/image */
 .bg-text {
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
   color: white;
   font-weight: bold;
   border: 3px solid #f1f1f1;
   position: absolute;
   top: 30%;
   left: 50%;
+  bottom:45%;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 80%;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
+
  .bio2 {
           font-size: 15px;
           text-align: center;
@@ -95,12 +100,16 @@ padding: 3px;
 background-color: black;
 color: white;
 }
+#more {display: none;}
 
 </style>
 </head>
 <body>
 
-<div class="bg-image"></div>
+<div class="bg-image">
+
+</div>
+
 
 <div class="bg-text">
     <h2 style="text-align:center"> ORDER NUMBER #________</h2>
@@ -109,15 +118,61 @@ color: white;
     <p class="bio2"><span class="w3-padding w3-margin"
                           style="font-weight: bold; color: #fdf5e6">PLEASE MAKE YOUR WAY TO COLLECT</span></p>
 
+
+
+        <h2>YOMAMI PAN-FRIED DUMPLINGS AND ASIAN FOODS</h2>
+        <p>This is a Family owned company with 30+ year experience in the textile industry, specializing in mass producti<span id="dots">...</span><span id="more">on.
+You can now get our frozen dumplings and wontons at Hilton Quarry Superspar with another AMAZING Dumpling Day.
+Find your fix TODAY at <a href="https://www.spar.co.za/Home/Store-View/SUPERSPAR-Hilton-Quarry-KwaZulu-Natal">Hilton Quarry Superspar</a>, in the freezer next to the eggs.</span></p>
+        <button onclick="myFunction()" id="myBtn">Read more</button>
+
+
+
 </div>
 
 
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+
 <footer>
-    <p>         FOLLOW US: <br>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-google"></a>
-        <a href="#" class="fa fa-instagram"></a>
+    <div class="w3-center contact" id="contact" >
+        <div class=" w3-left-align w3-margin-top contact-info ">
+            <p>We care about our customers<br>you can contact us for any feedback</p>
+            <p>         FOLLOW US: <br>
+                <a href="https://www.facebook.com/Yomami.foods/" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/yomami.foods/" class="fa fa-instagram"></a>
+        </div>
+        <div class="w3-left-align w3-margin-top contact-info" >
+
+            <div class="w3-margin-to  w3-left-align" >
+                <h4 style="font-weight: 600;">CONTACT INFO</h4>
+                <p> <i class="fa fa-phone " style="margin-right: 5px;font-size: 20px;"></i>  +27 82 326 2000</p>
+                <p><i class="fa fa-envelope " style="margin-right: 5px;font-size: 20px;"></i>
+                    Yomamifoods@gmail.com</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
 </footer>
 
 </body>
