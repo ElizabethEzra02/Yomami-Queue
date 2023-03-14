@@ -46,7 +46,7 @@
                 blur: 50%;
                 background-brightness: 9%;
                 background-size: cover;
-                background-image: url("https://i.pinimg.com/474x/0e/fe/3b/0efe3b87d7dc6d04eafa42acc90a1e3d.jpg");
+                background-image: url("https://www.foodandwine.com/thmb/lNvEVB4ZzAfSr-ONlOT-9SHFws8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/201005-r-xl-pork-and-kimchi-dumplings-2000-9f836d9eed7a4e53b00f88c38af87806.jpg");
                  min-height: 100%;
             }]
                    .container {
@@ -69,16 +69,52 @@
           margin: 0 auto;
           border: 5px solid red;
         }
+          /* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.3); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px transparent #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 6px #999;
+}
+
+.button:hover {background-color: black}
+
+.button:active {
+  background-color: black;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
 
         </style>
 </head>
 <body>
 <!-- Header with image -->
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
-    <div class="w3-display-middle w3-center">
 
-        <!-- Image and name container -->
+    <div class="bg-text">
         <div class="w3-margin-top" style="text-align: center">
+
             <div class="image w3-round"></div>
             <p class="bio1"><span class="w3-padding w3-margin"
                                   style="font-weight: bolder; color: #fdf5e6">YOMAMI</span></p>
@@ -90,15 +126,12 @@
         </div>
 
         <!-- Links section 1 -->
-        <div class="links-container">
-            <a href="#" class="w3-button w3-black w3-hover-red link border" target="_blank">START
-            </a>
-
-        </div>
-
+        <button class="button">Start</button>
     </div>
+
 </header>
 
 </body>
+
 
 </html>
